@@ -60,7 +60,9 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
         TreeDemoComponent,
         VirtualScrollingComponent
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: [AppComponent], 
+    imports: [
+        BrowserModule,
         BrowserAnimationsModule,
         MatMenuModule,
         MatButtonModule,
