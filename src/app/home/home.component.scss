@@ -9,15 +9,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin: 0;
 }
 
 h2 {
+  margin-top: 17px;
+  display: block;
   font-family: "Roboto";
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .title {
   text-align: center;
   margin-right: 15px;
-
 }
