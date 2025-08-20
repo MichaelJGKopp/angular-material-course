@@ -1,7 +1,40 @@
 <div [formGroup]="form" class="course-details-form">
 
+    <mat-form-field>
+        <input matInput 
+            formControlName="title" 
+            #title>
+        <!-- <span matPrefix style="margin-left: 0.5rem;">+49</span> -->
+        <!-- <span matSuffix style="margin-right: 0.5rem;">.00</span> -->
+        <mat-label>Course Title</mat-label>
+        <mat-hint align="end">
+            {{title.value.length}} / 100
+        </mat-hint>
+        <mat-error *ngIf="courseTitle.errors?.minlength">
+            A minimum length of 5 characters is required.
+        </mat-error>
+    </mat-form-field>
+
+    <mat-radio-group class="course-type" formControlName="courseType">
+        <mat-radio-button [disabled]="true" value="free">Free</mat-radio-button>
+        <mat-radio-button value="premium">Premium</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Select category</mat-label>
+        <mat-select formControlName="category" multiple>
+            <mat-option>None</mat-option>
+
+            <mat-optgroup label="Beginners">
+                <mat-option value="beginner-1">New to Programming</mat-option>
+                <mat-option value="beginner-2">New to Javascript</mat-option>
+                <mat-option value="beginner-3">New to Angular </mat-option>
+            </mat-optgroup>
+
+            <mat-option value="beginners">Beginners</mat-option>
+            <mat-option value="INTERMEDIATE">Intermediate</mat-option>
+            <mat-option value="ADVANCED">Advanced</mat-option>
+        </mat-select>
+    </mat-form-field>
 
 </div>
-
-
-
