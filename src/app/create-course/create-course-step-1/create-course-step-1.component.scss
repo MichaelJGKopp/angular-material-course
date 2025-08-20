@@ -2,6 +2,8 @@
 .course-details-form {
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
+  // gap: 10px;
 }
 
 .course-type {
@@ -11,4 +13,8 @@
 
 mat-radio-button {
   margin-right: 10px;
+}
+
+mat-checkbox {
+  margin-bottom: 20px;
 }

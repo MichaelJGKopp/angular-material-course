@@ -1,6 +1,6 @@
 <div [formGroup]="form" class="course-details-form">
 
-    <mat-form-field>
+    <mat-form-field appearance="outline">
         <input matInput 
             formControlName="title" 
             #title>
@@ -20,9 +20,10 @@
         <mat-radio-button value="premium">Premium</mat-radio-button>
     </mat-radio-group>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline">
         <mat-label>Select category</mat-label>
-        <mat-select formControlName="category" multiple>
+        <!-- currently single value field, else can use multiple -->
+        <mat-select formControlName="category">
             <mat-option>None</mat-option>
 
             <mat-optgroup label="Beginners">
@@ -37,4 +38,27 @@
         </mat-select>
     </mat-form-field>
 
+    <mat-form-field appearance="outline">
+        <mat-label>Release date</mat-label>
+        <input matInput formControlName="releasedAt" [matDatepicker]="releasedAtPicker">
+        <mat-datepicker-toggle matSuffix [for]="releasedAtPicker">
+
+        </mat-datepicker-toggle>
+        <mat-datepicker #releasedAtPicker [dateClass]="dateClass">
+
+        </mat-datepicker>
+    </mat-form-field>
+
+    <mat-checkbox formControlName="downloadsAllowed" color="primary" 
+    [indeterminate]="true" >
+        Allow downloads?
+    </mat-checkbox>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="longDescription"
+        cdkTextareaAutosize [cdkAutosizeMinRows]="2" [cdkAutosizeMaxRows]="8"></textarea>
+    </mat-form-field>
+
+    
 </div>
