@@ -1,3 +1,4 @@
+@use "@angular/material" as mat;
 
 .about-container {
   margin: 30px auto;
@@ -5,6 +6,7 @@
 }
 
 .course-image {
+  @include mat.elevation(12);
   max-width: 200px;
 }
 

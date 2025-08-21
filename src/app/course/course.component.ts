@@ -17,7 +17,7 @@ import {merge, fromEvent} from "rxjs";
 })
 export class CourseComponent implements OnInit, AfterViewInit {
 
-    course:Course;
+    course: Course;
 
     lessons = [
        {

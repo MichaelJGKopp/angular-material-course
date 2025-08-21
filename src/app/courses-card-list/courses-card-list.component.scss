@@ -1,6 +1,8 @@
 
+@use "@angular/material" as mat;
 
 .course-card {
+  @include mat.elevation(7);
   margin: 20px 10px;
   max-width:474px;
 }
