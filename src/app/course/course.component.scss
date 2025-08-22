@@ -57,9 +57,17 @@ mat-paginator {
   margin: 130px auto 0 auto;
 }
 
+.mat-column-select {
+  margin-right: 0;
+  padding-right: 0;
+  text-align: right;
+}
+
 .mat-column-seqNo {
-  width: 80px;
+  // width: 30px;
   border-right: 1px solid black;
+  margin-left: 0;
+  padding-left: 0;
   padding-right: 24px;
   text-align: center;
 }
