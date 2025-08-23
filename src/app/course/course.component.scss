@@ -84,3 +84,9 @@ mat-paginator {
 .collapsed-detail {
   display: none;
 }
+
+.scrolling-container {
+  overflow: auto;
+  max-height: 350px;
+  max-width: 300px;
+}
