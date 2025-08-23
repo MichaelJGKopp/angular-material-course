@@ -1,4 +1,3 @@
-
 .edit-course-form {
   min-width: 300px;
 }
@@ -8,7 +7,17 @@ mat-dialog-content {
   flex-direction: column;
 }
 
+.description-field {
+  margin-top: 0.3rem;
+}
+
 textarea {
-    height: 100px;
-    resize: vertical;
+  height: 100px;
+  resize: vertical;
+}
+
+mat-dialog-actions {
+  margin-top: 0;
+  padding-left: 24px;
+  padding-top: 0;
 }
