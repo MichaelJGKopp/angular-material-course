@@ -93,9 +93,22 @@ export class DragDropComponent {
     },
   ];
 
+  done: Lesson[] = [];
+
   onDrop($event: CdkDragDrop<Lesson[]>) {
     moveItemInArray(this.lessons, $event.previousIndex, $event.currentIndex);
     console.log("Item moved", $event);
     console.log("Current lessons", this.lessons);
+  }
+
+  onDropMultiList($event: CdkDragDrop<Lesson[]>) {
+    const previousContainer = $event.previousContainer;
+    const currentContainer = $event.container;
+
+    if (previousContainer === currentContainer) {
+      moveItemInArray(currentContainer.data, $event.previousIndex, $event.currentIndex);
+    } else {
+      transferArrayItem(previousContainer.data, currentContainer.data, $event.previousIndex, $event.currentIndex);
+    }
   }
 }
