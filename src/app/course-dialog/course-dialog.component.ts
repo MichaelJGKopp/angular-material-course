@@ -12,7 +12,7 @@ import * as moment from "moment";
 @Component({
   selector: "course-dialog",
   templateUrl: "./course-dialog.component.html",
-  styleUrls: ["./course-dialog.component.css"],
+  styleUrls: ["./course-dialog.component.scss"],
   standalone: false,
 })
 export class CourseDialogComponent implements OnInit {
@@ -49,10 +49,11 @@ export function openEditCourseDialog(dialog: MatDialog, course: Course) {
   const dialogRef = dialog.open(CourseDialogComponent, {
     disableClose: true,
     autoFocus: true,
+    width: "90%",
     // minHeight: "400px",
     // minWidth: "600px",
     // maxHeight: "80%",
-    // maxWidth: "80%",
+    maxWidth: "400px",
     data: { ...course },
   });
 

@@ -1,5 +1,6 @@
 .edit-course-form {
   min-width: 300px;
+  width: 90%;
 }
 
 mat-dialog-content {
@@ -11,7 +12,7 @@ mat-dialog-content {
   margin-top: 0.3rem;
 }
 
-textarea {
+.long-description .mat-mdc-input-element {
   height: 100px;
   resize: vertical;
 }
