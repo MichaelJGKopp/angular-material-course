@@ -1,4 +1,6 @@
 
+@use "@angular/material" as mat;
+
 .container {
   font-family: "Roboto";
   display: flex;
@@ -6,8 +8,8 @@
   padding: 30px;
 }
 
-
 .scrolling-container {
+  @include mat.elevation(7);
   display: block;
   width: 200px;
   height: 200px;
