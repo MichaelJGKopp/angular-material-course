@@ -4,10 +4,18 @@
 
     <h3>Virtual Scrolling Demo</h3>
 
-    <mat-list class="scrolling-container">
-      @for (item of items; track $index) {
-      <mat-list-item> {{item}} </mat-list-item>
-      }
+    <mat-list>
+      <cdk-virtual-scroll-viewport itemSize="48" class="scrolling-container">
+        <!-- works just like *ngFor -->
+        <mat-list-item *cdkVirtualFor="let item of items; trackBy: trackByFn;
+          let index = index;
+          let count = count;
+          let first = first;
+          let last = last;
+          let even = even;
+          let odd = odd;
+        ">{{item}}</mat-list-item>
+      </cdk-virtual-scroll-viewport>
     </mat-list>
 
   </div>

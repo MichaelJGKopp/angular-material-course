@@ -8,12 +8,13 @@ import {Component, OnInit} from '@angular/core';
     standalone: false
 })
 export class VirtualScrollingComponent implements OnInit {
-
   items = Array.from({length: 20000}).map((value, i) => `Item #${i}`);
 
   ngOnInit() {
 
   }
 
-
+  trackByFn(index: number, item: string) {
+    return item;
+  }
 }
