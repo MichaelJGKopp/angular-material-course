@@ -1,4 +1,4 @@
-<mat-grid-list [cols]="cols" [rowHeight]="rowHeight">
+<mat-grid-list [cols]="cols" [rowHeight]="rowHeight" [ngClass]="{ 'handset-portrait': handsetPortrait }">
     @for (course of courses; track course.id) {
     <mat-grid-tile>
         <mat-card class="course-card">
@@ -8,7 +8,7 @@
 
             <img mat-card-image [src]="course.iconUrl">
 
-            <mat-card-content>
+            <mat-card-content class="long-description">
                 <p>{{ course.longDescription }}</p>
             </mat-card-content>
 

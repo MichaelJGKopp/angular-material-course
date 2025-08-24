@@ -1,11 +1,12 @@
 .edit-course-form {
   min-width: 300px;
-  width: 90%;
+  // width: 95%;
 }
 
 mat-dialog-content {
   display: flex;
   flex-direction: column;
+  padding: 0 15px !important;
 }
 
 .description-field {

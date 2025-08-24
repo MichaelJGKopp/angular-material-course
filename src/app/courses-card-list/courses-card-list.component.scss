@@ -1,11 +1,10 @@
-
 @use "@angular/material" as mat;
 
 .course-card {
   @include mat.elevation(7);
   margin: 20px 10px;
-  max-width:474px;
-  width: 95%;
+  max-width: 474px;
+  // width: 95%;
   // max-height: 450px;
   // height: 100%;
 }
@@ -25,7 +24,6 @@
   // max-height: 267px;
 }
 
-
 .long-description {
   min-height: 50px;
   max-width: 442px;
@@ -37,4 +35,19 @@ mat-card-content p {
 
 mat-card-title {
   margin: 0 0 10px 20px;
+}
+
+.handset-portrait {
+  .course-card {
+    max-width: 100%;
+    margin: 10px 0 0 0;
+    padding: 0 0 16px 0;
+  }
+  .course-thumbnail {
+    max-width: 100%;
+    margin: 0;
+  }
+  .long-description {
+    padding: 10px 10px 0 10px;
+  }
 }
