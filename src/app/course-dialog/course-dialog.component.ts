@@ -47,6 +47,8 @@ export class CourseDialogComponent implements OnInit {
 
 export function openEditCourseDialog(dialog: MatDialog, course: Course) {
   const dialogRef = dialog.open(CourseDialogComponent, {
+    panelClass: "modal-panel",
+    backdropClass: "modal-backdrop-panel",
     disableClose: true,
     autoFocus: true,
     width: "90%",
