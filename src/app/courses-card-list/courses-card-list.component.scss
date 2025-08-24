@@ -5,6 +5,9 @@
   @include mat.elevation(7);
   margin: 20px 10px;
   max-width:474px;
+  width: 95%;
+  // max-height: 450px;
+  // height: 100%;
 }
 
 .course-actions {
@@ -17,8 +20,9 @@
 }
 
 .course-thumbnail {
-  max-width:474px;
-  max-height: 267px;
+  width: 100%;
+  // max-width:474px;
+  // max-height: 267px;
 }
 
 
