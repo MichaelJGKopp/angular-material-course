@@ -67,15 +67,13 @@ const TREE_DATA: CourseNode[] = [
   standalone: false,
 })
 export class TreeDemoComponent implements OnInit {
-  nestedDataSource = TREE_DATA;
-  // nestedDataSource = new MatTreeNestedDataSource<CourseNode>();
+  dataSource = TREE_DATA;
   childrenAccessor = (node: CourseNode) => node.children ?? [];
 
   ngOnInit() {
-    // this.nestedDataSource.data = TREE_DATA;
   }
 
-  hasNestedChild(index: number, node: CourseNode) {
+  hasChild(index: number, node: CourseNode) {
     return node?.children?.length > 0;
   }
 }
